@@ -1,0 +1,64 @@
+{
+    "files": {
+      "ignore": [
+        "*.js",
+        ".build",
+        ".esbuild",
+        ".github/actions/**/dist",
+        ".serverless",
+        "__snapshots__",
+        "package.json",
+        "package-lock.json",
+        "app-client",
+        "brickbank-app-client",
+        "brickbank-lib/lib",
+        "brickbank-dev-lib/lib",
+        "cdk.out",
+        "coverage",
+        "cypress",
+        "dist",
+        "documentation/openapi/api/spec-output.bundle.env.json",
+        "generated-documentation",
+        "generated-types",
+        "load-tests",
+        "node_modules"
+      ]
+    },
+    "formatter": {
+      "indentStyle": "space"
+    },
+    "javascript": {
+      "formatter": {
+        "quoteStyle": "single"
+      }
+    },
+    "linter": {
+      "rules": {
+        "complexity": {
+          "useOptionalChain": "warn"
+        },
+        "correctness": {
+          "noUnreachableSuper": "off",
+          "noUnusedVariables": "warn"
+        },
+        "nursery": {
+          "useCamelCase": "off"
+        },
+        "performance": {
+          "noDelete": "off"
+        },
+        "style": {
+          "noNonNullAssertion": "off"
+        },
+        "suspicious": {
+          "noExplicitAny": "off",
+          "noRedeclare": "off",
+          "noShadowRestrictedNames": "off"
+        }
+      }
+    },
+    "organizeImports": {
+      "enabled": false
+    }
+  }
+  

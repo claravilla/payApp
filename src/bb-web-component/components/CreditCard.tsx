@@ -9,7 +9,7 @@ import formatAmount from "../utils/formatAmount";
 import Loader from "./Loader";
 
 function CreditCard(props: { paymentDetails: CreditCardProps }) {
-  const { amount, billingAddress, clientKey, countryCode, name, origin, paymentMethods, paymentReference, shopperIP, shopperEmail, token } = props.paymentDetails;
+  const { amount, billingAddress, clientKey, confirmationPage, countryCode, name, origin, paymentMethods, paymentReference, shopperIP, shopperEmail, token } = props.paymentDetails;
   const [error, setError] = useState("");
   const [checkout, setCheckout] = useState<any>(null);
   const [actionData, setActionData] = useState<any>(null);
@@ -69,7 +69,7 @@ function CreditCard(props: { paymentDetails: CreditCardProps }) {
       const { legoPaymentId: id, resultCode } = response.data;
       localStorage.setItem("id", id);
       if (resultCode === "Authorised") {
-        navigate("/confirmation");
+        navigate(confirmationPage);
       } else if (resultCode === "Refused") {
         navigate("/error");
       } else if (resultCode === "RedirectShopper") {

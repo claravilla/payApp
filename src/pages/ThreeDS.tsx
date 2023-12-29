@@ -52,9 +52,9 @@ function ThreeDS() {
     <>
       <header>Payment verification</header>
       <main>
-      <Loader />
-      <p>We are checking your payment</p>
-      <p>Please wait - DO NOT REFRESH</p>
+        <Loader />
+        <p>We are checking your payment</p>
+        <p>Please wait - DO NOT REFRESH</p>
       </main>
     </>
   );

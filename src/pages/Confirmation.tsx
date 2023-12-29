@@ -3,10 +3,12 @@ import { LegoPaymentIdContext } from "../components/context/legoPaymentIdContext
 import PaymentResults from "../components/PaymentResults";
 
 function Confirmation() {
-    const {legoPaymentId} = useContext(LegoPaymentIdContext);
+    const { legoPaymentId, updateLegoPaymentId } = useContext(LegoPaymentIdContext);
+    const newId = localStorage.getItem("id");
+    updateLegoPaymentId(newId);
     return (
         <main>
-            <PaymentResults legoPaymentId={legoPaymentId}/>
+            <PaymentResults legoPaymentId={legoPaymentId} />
         </main>
     );
 }

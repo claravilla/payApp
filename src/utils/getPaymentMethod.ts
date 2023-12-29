@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const getPaymentMethods = async (country: string, token: string) => {
-  const url = `${process.env.REACT_APP_PAYMENT_URL}/methods`;
+  const url = `${process.env.REACT_APP_PAYMENT_URL}methods`;
+  console.log(url);
   const response = await axios({
     method: "post",
     url: url,

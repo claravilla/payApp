@@ -19,6 +19,7 @@ export type CreditCardProps = {
   amount: number,
   billingAddress: BillingAddress,
   clientKey: string,
+  confirmationPage: string,
   countryCode: string,
   name: string,
   origin: string,
